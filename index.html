@@ -1,271 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌭❤️⚪ A Love Story — Sausage & Fishball</title>
-  <meta name="description" content="An adorable interactive love story between a sausage and a fishball, with falling hearts and a love letter." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my dear sausague? 🌭</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- FALLING HEARTS CANVAS -->
-  <canvas id="hearts-canvas"></canvas>
+    <div class="hearts-bg"></div>
 
-  <!-- ===== SCENE 0: TITLE ===== -->
-  <section id="scene-title" class="scene active">
-    <div class="scene-inner">
-      <div class="title-characters">
-        <div class="character sausage-char bounce-in" id="title-sausage">
-          <div class="sausage-body">
-            <div class="sausage-face">
-              <div class="eye left"></div>
-              <div class="eye right"></div>
-              <div class="cheek left"></div>
-              <div class="cheek right"></div>
-              <div class="mouth smile"></div>
-            </div>
-          </div>
+    <div class="container">
+        <h1>Will you be my lover? 💕</h1>
+
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif" alt="cute character">
         </div>
 
-        <div class="heart-float" id="title-heart">💕</div>
-
-        <div class="character fishball-char bounce-in delay" id="title-fishball">
-          <div class="fishball-body">
-            <div class="fishball-face">
-              <div class="eye left"></div>
-              <div class="eye right"></div>
-              <div class="cheek left"></div>
-              <div class="cheek right"></div>
-              <div class="mouth smile"></div>
-            </div>
-          </div>
+        <div class="buttons">
+            <button id="yes-btn" onclick="handleYesClick()">Yes</button>
+            <button id="no-btn" onclick="handleNoClick()">No</button>
         </div>
-      </div>
-
-      <h1 class="title fade-up">A Love Story</h1>
-      <p class="subtitle fade-up delay">between a Sausage 🌭 and a Fishball ⚪</p>
-      <button id="btn-start" class="btn-magic fade-up delay2">Begin Our Story ✨</button>
+        <div id="tease-toast"></div>
     </div>
-  </section>
 
-  <!-- ===== SCENE 1: THEY MEET ===== -->
-  <section id="scene-meet" class="scene">
-    <div class="scene-inner">
-      <div class="story-stage">
-        <div class="character sausage-char walk-in-left" id="meet-sausage">
-          <div class="sausage-body">
-            <div class="sausage-face">
-              <div class="eye left"></div>
-              <div class="eye right"></div>
-              <div class="cheek left"></div>
-              <div class="cheek right"></div>
-              <div class="mouth surprise"></div>
-            </div>
-          </div>
-        </div>
+    <audio id="bg-music" loop autoplay muted>
+        <source src="music/beabadoobee - Glue Song (Lyrics).mp3" type="audio/mpeg">
+    </audio>
 
-        <div class="character fishball-char walk-in-right" id="meet-fishball">
-          <div class="fishball-body">
-            <div class="fishball-face">
-              <div class="eye left"></div>
-              <div class="eye right"></div>
-              <div class="cheek left"></div>
-              <div class="cheek right"></div>
-              <div class="mouth surprise"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
 
-      <div class="dialogue-box" id="dialogue-meet">
-        <p class="dialogue-text typewriter" id="text-meet"></p>
-      </div>
-
-      <button id="btn-next-1" class="btn-magic hidden">What happens next? →</button>
-    </div>
-  </section>
-
-  <!-- ===== SCENE 2: THE DATE ===== -->
-  <section id="scene-date" class="scene">
-    <div class="scene-inner">
-      <div class="date-scene">
-        <div class="hotpot-container">
-          <div class="hotpot">
-            <div class="steam s1">~</div>
-            <div class="steam s2">~</div>
-            <div class="steam s3">~</div>
-            <div class="pot-body">
-              <div class="broth"></div>
-              <div class="bubble b1"></div>
-              <div class="bubble b2"></div>
-              <div class="bubble b3"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="date-characters">
-          <div class="character sausage-char" id="date-sausage">
-            <div class="sausage-body">
-              <div class="sausage-face">
-                <div class="eye left happy"></div>
-                <div class="eye right happy"></div>
-                <div class="cheek left glow"></div>
-                <div class="cheek right glow"></div>
-                <div class="mouth big-smile"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="character fishball-char" id="date-fishball">
-            <div class="fishball-body">
-              <div class="fishball-face">
-                <div class="eye left happy"></div>
-                <div class="eye right happy"></div>
-                <div class="cheek left glow"></div>
-                <div class="cheek right glow"></div>
-                <div class="mouth big-smile"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dialogue-box" id="dialogue-date">
-        <p class="dialogue-text typewriter" id="text-date"></p>
-      </div>
-
-      <div class="choice-box hidden" id="choices-date">
-        <p class="choice-prompt">What should Sausage say?</p>
-        <button class="btn-choice" data-choice="sweet" id="choice-sweet">💕 "You make my heart go bouncy-bouncy!"</button>
-        <button class="btn-choice" data-choice="funny" id="choice-funny">😂 "We’re the perfect hot pot combo!"</button>
-      </div>
-
-      <button id="btn-next-2" class="btn-magic hidden">Continue the story →</button>
-    </div>
-  </section>
-
-  <!-- ===== SCENE 3: THE CONFESSION ===== -->
-  <section id="scene-confess" class="scene">
-    <div class="scene-inner">
-      <div class="confession-stage">
-        <div class="moonlight"></div>
-        <div class="stars-container" id="stars"></div>
-
-        <div class="together-characters">
-          <div class="character sausage-char" id="confess-sausage">
-            <div class="sausage-body blush-anim">
-              <div class="sausage-face">
-                <div class="eye left love"></div>
-                <div class="eye right love"></div>
-                <div class="cheek left super-glow"></div>
-                <div class="cheek right super-glow"></div>
-                <div class="mouth shy-smile"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="character fishball-char" id="confess-fishball">
-            <div class="fishball-body blush-anim">
-              <div class="fishball-face">
-                <div class="eye left love"></div>
-                <div class="eye right love"></div>
-                <div class="cheek left super-glow"></div>
-                <div class="cheek right super-glow"></div>
-                <div class="mouth shy-smile"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="heart-burst" id="heart-burst"></div>
-      </div>
-
-      <div class="dialogue-box" id="dialogue-confess">
-        <p class="dialogue-text typewriter" id="text-confess"></p>
-      </div>
-
-      <button id="btn-next-3" class="btn-magic hidden">Open the Love Letter 💌</button>
-    </div>
-  </section>
-
-  <!-- ===== SCENE 4: LOVE LETTER ===== -->
-  <section id="scene-letter" class="scene">
-    <div class="scene-inner">
-      <div class="letter-envelope" id="envelope">
-        <div class="envelope-flap"></div>
-        <div class="envelope-body">
-          <span class="envelope-heart">💌</span>
-        </div>
-        <p class="envelope-label">Click to open</p>
-      </div>
-
-      <div class="love-letter hidden" id="love-letter">
-        <div class="letter-paper">
-          <p class="letter-date">February 14th</p>
-          <p class="letter-greeting">My Dearest Fishball,</p>
-
-          <p class="letter-body">
-            From the moment I saw you bobbing in the hot pot, I knew you were special.
-            Round, warm, and perfectly bouncy — you turned an ordinary meal into a memory.
-          </p>
-
-          <p class="letter-body">
-            People say we’re different — I’m long, you’re round. I’m smoky, you’re springy.
-            But that’s exactly why we work: you soften my sharp edges, and I bring a little
-            extra flavor to your world.
-          </p>
-
-          <p class="letter-body">
-            Every moment with you feels like being on the same skewer — close, cozy,
-            and exactly where I belong. 🍢
-          </p>
-
-          <p class="letter-body">
-            I love you more than curry loves fishballs.<br/>
-            More than steam loves a fresh bun.<br/>
-            More than chopsticks love picking up the best bite.
-          </p>
-
-          <p class="letter-closing">Forever yours in every pot and every bowl,</p>
-          <p class="letter-signature">Your Sausage 🌭❤️</p>
-        </div>
-
-        <div class="letter-characters">
-          <div class="character sausage-char tiny" id="letter-sausage">
-            <div class="sausage-body">
-              <div class="sausage-face">
-                <div class="eye left love"></div>
-                <div class="eye right love"></div>
-                <div class="cheek left super-glow"></div>
-                <div class="cheek right super-glow"></div>
-                <div class="mouth big-smile"></div>
-              </div>
-            </div>
-          </div>
-
-          <span class="skewer-heart">💕🍢💕</span>
-
-          <div class="character fishball-char tiny" id="letter-fishball">
-            <div class="fishball-body">
-              <div class="fishball-face">
-                <div class="eye left love"></div>
-                <div class="eye right love"></div>
-                <div class="cheek left super-glow"></div>
-                <div class="cheek right super-glow"></div>
-                <div class="mouth big-smile"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button id="btn-restart" class="btn-magic">Relive Our Story 🔄</button>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
