@@ -1,24 +1,24 @@
 const gifStages = [
-    "https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif",    // 0 normal
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAd/chiikawa-hachiware.gif",  // 1 confused
-    "https://media.tenor.com/f_rkpJbH1s8AAAAj/somsom1012.gif",             // 2 pleading
-    "https://media.tenor.com/OGY9zdREsVAAAAAj/somsom1012.gif",             // 3 sad
-    "https://media1.tenor.com/m/WGfra-Y_Ke0AAAAd/chiikawa-sad.gif",       // 4 sadder
-    "https://media.tenor.com/CivArbX7NzQAAAAj/somsom1012.gif",             // 5 devastated
-    "https://media.tenor.com/5_tv1HquZlcAAAAj/chiikawa.gif",               // 6 very devastated
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAC/chiikawa-hachiware.gif"  // 7 crying runaway
+    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDZwMWI1Y3U2NmI2N3YyMnhnNGZ3ZDd4dTQ4MHRldnJkc3NvM2VwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/s3Ol6caOFupJpVdJSu/giphy.gif",    // 0 normal
+    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDZwMWI1Y3U2NmI2N3YyMnhnNGZ3ZDd4dTQ4MHRldnJkc3NvM2VwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/s3Ol6caOFupJpVdJSu/giphy.gif",  // 1 confused
+    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXduMGFnb2dmcWh4bHc1N2NpcTE3NHl3cnZmZzdlandmdWo4cWh6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ioc5J912T1zTW/giphy.gif",             // 2 pleading
+    "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnU1Y2hldXJmdzUwcWtzbGhtN3dweGxrMXFhdDgxa3lsb2V3d2I0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BEob5qwFkSJ7G/giphy.gif",             // 3 sad
+    "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmowODZ5Zjdvam85NTRidWE1c2prd3ZuaHkydGhxbDNxeWVpemZjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yzDNdo4s1oGw7jEu24/giphy.gif",       // 4 sadder
+    "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXdtYXh0bzZqaHVrdml5cGl5NHU5bHk4cXJjNzM2dzY4anBzcmN6YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H4uE6w9G1uK4M/giphy.gif",             // 5 devastated
+    "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5bTVhM296N3R3YzRxajVienZzdjRpY3plMmc0c2t6ZGtwN3dreSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zMN2a7BUnucUPWydim/giphy.gif",               // 6 very devastated
+    "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmVzcHJlMjZ0cDAzN2gyN25pOGY1OGU3cDBnOWlrczhrOTYwejZveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mEtSQlxqBtWWA/giphy.gif"  // 7 crying runaway
 ]
 
 const noMessages = [
     "No",
     "Are you positive? 🤔",
-    "Pookie please... 🥺",
+    "Dont leave me alone please... 🥺",
     "If you say no, I will be really sad...",
     "I will be very sad... 😢",
-    "Please??? 💔",
+    "Please my sausage 💔",
     "Don't do this to me...",
     "Last chance! 😭",
-    "You can't catch me anyway 😜"
+    "You can't catch me anyway 🐟🥚🐟🥚"
 ]
 
 const yesTeasePokes = [
